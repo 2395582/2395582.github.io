@@ -1,0 +1,429 @@
+<html lang="en" class="no-js">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.1/style/jquery.jscrollpane.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+      html {
+        height: 100%;
+      }
+
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: "Lato", Calibri, Arial, sans-serif;
+        background: #fff;
+        font-weight: 400;
+        font-size: 100%;
+        color: #333;
+        height: 100%;
+        overflow-y: hidden;
+      }
+
+      .js body {
+        overflow: hidden;
+      }
+
+      a {
+        color: #555;
+        text-decoration: none;
+        outline: none;
+      }
+
+      a:hover {
+        color: #000;
+      }
+
+      .container,
+      .bb-custom-wrapper,
+      .bb-bookblock {
+        width: 100%;
+        height: 100%;
+      }
+
+      .container {
+        position: relative;
+        left: 0px;
+        -webkit-transition: left 0.3s ease-in-out;
+        -o-transition: left 0.3s ease-in-out;
+        transition: left 0.3s ease-in-out;
+      }
+
+      .slideRight {
+        left: 240px;
+      }
+
+      .no-js .container {
+        padding-left: 240px;
+      }
+
+      .menu-panel {
+        background: #34495e;
+        width: 240px;
+        height: 100%;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      }
+
+      .js .menu-panel {
+        position: absolute;
+        left: -240px;
+      }
+
+      .menu-panel h3 {
+        font-size: 1.5em;
+        padding: 20px;
+        font-weight: 300;
+        color: #fff;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+        font-family: "Oswald", sans-serif !important;
+        text-transform: uppercase;
+      }
+
+      .menu-toc {
+        list-style: none;
+      }
+
+      .menu-toc li a {
+        display: block;
+        color: #34495e;
+        font-size: 1.1em;
+        line-height: 3.5;
+        padding: 0 20px;
+        cursor: pointer;
+        background: white;
+        border-bottom: 1px solid #ebebeb;
+        font-family: "Oswald", sans-serif !important;
+        text-transform: uppercase;
+      }
+
+      .menu-toc li a:hover,
+      .menu-toc li.menu-toc-current a {
+        background: #f4c150;
+      }
+
+      .menu-panel div {
+        margin-top: 20px;
+      }
+
+      .menu-panel div a {
+        text-transform: uppercase;
+        font-size: 0.6em;
+        line-height: 1;
+        padding: 5px 20px;
+        display: block;
+        border: none;
+        color: #bc0b0b;
+        letter-spacing: 1px;
+        font-weight: 800;
+        text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+      }
+
+      .menu-panel div a:hover {
+        background: inherit;
+        color: #fff;
+        text-shadow: none;
+      }
+
+      .bb-custom-wrapper nav {
+        top: 20px;
+        left: 60px;
+        position: absolute;
+        z-index: 1000;
+      }
+
+      .bb-custom-wrapper nav span,
+      .menu-button {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        top: 0;
+        left: 0;
+
+        background: orange;
+        border-radius: 50%;
+        color: #fff;
+        line-height: 42px;
+        text-align: center;
+        speak: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .bb-custom-wrapper nav span:last-child {
+        left: 50px;
+      }
+
+      .menu-button {
+        z-index: 1000;
+        left: 10px;
+        top: 20px;
+        text-indent: -9000px;
+      }
+
+      .menu-button:after {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 2px;
+        background: #fff;
+        top: 50%;
+        margin-top: -1px;
+        left: 25%;
+        box-shadow: 0 -4px #fff, 0 4px #fff;
+      }
+
+      .js .content {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        bottom: 50px;
+        overflow: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+      }
+
+      .scroller {
+        padding: 10px 5% 10px 5%;
+      }
+
+      .content h2 {
+        font-weight: 300;
+        font-size: 3em;
+        padding: 0 0 10px;
+        color: #333;
+        margin: 0 8% 10px;
+        text-align: left;
+        box-shadow: 0 10px 0 rgba(0, 0, 0, 0.02);
+        text-shadow: 0 0 2px #fff;
+        font-family: "Oswald", sans-serif !important;
+        text-transform: uppercase;
+      }
+
+      .no-js .content h2 {
+        padding: 40px 1% 20px;
+      }
+
+      .content p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        font-weight: 420;
+        padding: 5px 8%;
+        text-align: justify;
+        font-family: "Roboto Condensed", sans-serif;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="menu-panel">
+        <h3>Table of Contents</h3>
+        <ul id="menu-toc" class="menu-toc">
+          <li class="menu-toc-current">
+            <a href="#item1">You picked a fine time to leave me, Lucille</a>
+          </li>
+          <li><a href="#item2">The Prison Visit</a></li>
+          <li><a href="#item3">Unrequited</a></li>
+          <li><a href="#item4">On An Evening in Roma</a></li>
+          <li><a href="#item5">Stinger</a></li>
+        </ul>
+      </div>
+
+      <div class="bb-custom-wrapper">
+        <div id="bb-bookblock" class="bb-bookblock">
+          <div class="bb-item" id="item1">
+            <div class="content">
+              <div class="scroller">
+                <br />
+                <h2>
+                  <a href="">You picked a fine time to leave me, Lucille</a>
+                </h2>
+                <br /><br />
+                <p>
+                  She sits at the bar. No ring. A patron swoops in. A tip of the
+                  hat and a line later, she laughs.
+                </p>
+                <p>He points at an empty stool. She nods. He sits.</p>
+                <p>Another laugh. Another line. Another man bursts in.</p>
+                <p>His ring is still on.</p>
+                <p>He’s not laughing.</p>
+                <p>And he’s done with lines.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bb-item" id="item2">
+            <div class="content">
+              <div class="scroller">
+                <br />
+                <h2>The Prison Visit</h2>
+                <br /><br />
+                <p>
+                  Sofia walks into the room and sits at the assigned seat,
+                  tucking her skirt under her legs. Her husband, Vinny is
+                  already waiting for her on the other side of the glass. He
+                  smiles broadly, speaking words she can’t hear. He picks up the
+                  phone on his side of the partition and motions for her to do
+                  the same. She wraps a handkerchief around the handle and
+                  brings the phone to her ear.
+                </p>
+                <p>
+                  They talk, his smile always a bit broader than hers. He leans
+                  back in his chair and asks her something. She answers with a
+                  small nod, the corners of her mouth twitching. Tears well up
+                  in her eyes.
+                </p>
+                <p>
+                  Vinny leans forward to console his wife. He says something,
+                  making her smile. She looks at him, tilting her head at a
+                  slight angle. Her free hand moves forward, meets the
+                  partition, then returns to her lap.
+                </p>
+                <p>
+                  He asks a question. She composes herself and answers in a way
+                  akin to a waitress reciting back a large order. He nods then
+                  leans back again. He asks something else. Her free hand grabs
+                  a handful of skirt under the table. It appears as though the
+                  waitress has forgotten the sugar. He yells, then looks around
+                  over his shoulder. He leans in closer and lowers his voice. He
+                  speaks slowly. She nods frantically, prompting a tear to roll
+                  down her cheek. He sighs, then soothes her.
+                </p>
+                <p>
+                  She smiles. He leans back and lights a cigarette. A guard cuts
+                  off his next sentence.
+                </p>
+                <p>
+                  He blows smoke in the guard’s face and sends him walking. The
+                  guard is quickly replaced by the warden. He grabs Vinny’s arm.
+                </p>
+                <p>
+                  Vinny stands up and shrugs the warden off. He turns back to
+                  his wife and says something. For the first time in their
+                  exchange his smile falters a bit. Sofia notices and stands up.
+                  She nods in response, tears now flowing freely down her face.
+                  Her final words are cut off as the warden slams the phone into
+                  the receiver. Her husband gives her a final wink and a smile,
+                  then he’s gone.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bb-item" id="item3">
+            <div class="content">
+              <div class="scroller">
+                <br />
+                <h2>Unrequited</h2>
+                <br /><br />
+                <p>She didn't have to hold his hand...</p>
+              </div>
+            </div>
+          </div>
+          <div class="bb-item" id="item4">
+            <div class="content">
+              <div class="scroller">
+                <br />
+                <h2>On An Evening in Roma</h2>
+                <br /><br />
+                <p>
+                  There’s a fountain in the middle of the plaza. The
+                  cobblestoned street is bustling with people, either ending
+                  their day or starting their night. There’s a cinema on one
+                  side of the plaza. A small, seemingly insignificant building
+                  with double doors on either side of it’s ticket booth. Doors
+                  that promise a few hours of escape for anyone willing to pay
+                  the price.
+                </p>
+                <p>
+                  The marquee holds the name of tonight’s attraction, in black
+                  letters on a white wall. “Una Corda di Bugie Bianche”, or “A
+                  String of White Lies”.
+                </p>
+                <p>
+                  By night, the sign had done it’s job. A crowd had assembled,
+                  then filtered through the double doors into the cinema. Maybe
+                  it was the attraction of a famous cast, the promise of a
+                  visionary director, or maybe it was just film for the sake of
+                  film.
+                </p>
+                <p>
+                  The crowd becomes an audience as it sits down, ushered to
+                  their seats by an old man with a flashlight. Chatter is
+                  exchanged excitedly, then the lights go, and the screen lights
+                  up. All is still. The movie starts.
+                </p>
+                <p>
+                  The faces of the crowd- no, the audience, is lit up by the
+                  screen. Cigarette smoke gathers in a cloud above their heads,
+                  snacks are chewed, and hands are held. The movie speaks and
+                  they respond, a laugh here, a gasp there, sometimes just a
+                  smile. Cinema, is a living thing.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bb-item" id="item5">
+            <div class="content">
+              <div class="scroller">
+                <br />
+                <h2>Stinger</h2>
+                <br /><br />
+                <p>He slides the case across the table</p>
+                <p>
+                  The other man opens it. He looks up and smiles, then looks
+                  down into the case again.
+                </p>
+                <p>
+                  He resurfaces. This time there's no smile. Just a badge and a
+                  gun. "It's all over, Buster..."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav>
+          <span id="bb-nav-prev">&larr;</span>
+          <span id="bb-nav-next">&rarr;</span>
+        </nav>
+
+        <span id="tblcontents" class="menu-button">Table of Contents</span>
+      </div>
+    </div>
+    <!-- /container -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.1/script/jquery.jscrollpane.min.js"></script>
+
+    <script src="js/jquery.bookblock.js"></script>
+    <script src="js/page.js"></script>
+    <script>
+      $(function () {
+        Page.init();
+      });
+    </script>
+  </body>
+</html>

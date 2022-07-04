@@ -1,0 +1,75 @@
+body {
+  background: url(/Images/portfoliobackground.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+section nav {
+  background-color: rgba(180, 98, 40, 0.733);
+  backdrop-filter: blur(5px);
+  height: 95px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.logo {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 85px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-decoration: underline;
+  margin: 0 20px;
+}
+
+section nav ul {
+  float: right;
+  margin-right: 30px;
+}
+
+section nav ul li {
+  display: inline-block;
+  margin-bottom: 90%;
+  margin-right: 20px;
+}
+
+section nav ul li a {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.tupperware {
+  background-color: rgba(180, 98, 40, 0.733);
+  backdrop-filter: blur(5px);
+  height: 450px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.tupperware article p {
+  float: right;
+  font-size: 20px;
+}
+
+.tupperware ul li {
+  margin-top: 60px;
+}
+
+.tupperware ul li a {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.address {
+  color: rgb(22, 9, 7);
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 80px;
+  margin-left: 690px;
+  font-family: "Times New Roman", Times, serif;
+}

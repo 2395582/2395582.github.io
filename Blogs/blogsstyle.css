@@ -1,0 +1,100 @@
+body {
+  background: url(/Images/blogbackground.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+section nav {
+  background-color: rgba(180, 98, 40, 0.733);
+  backdrop-filter: blur(5px);
+  height: 95px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.logo {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 85px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-decoration: underline;
+  margin: 0 20px;
+}
+
+section nav ul {
+  float: right;
+  margin-right: 30px;
+}
+
+section nav ul li {
+  display: inline-block;
+  margin-bottom: 90%;
+  margin-right: 20px;
+}
+
+section nav ul li a {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.tupperware {
+  background-color: rgba(180, 98, 40, 0.733);
+  backdrop-filter: blur(5px);
+  height: 145px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.tupperware article p {
+  float: right;
+  font-size: 20px;
+}
+
+.address {
+  color: rgb(22, 9, 7);
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 80px;
+  margin-left: 690px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.shelf {
+  margin-top: 35px;
+  margin-left: 500px;
+  background-color: rgba(180, 98, 40, 0.733);
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  row-gap: 20px;
+  column-gap: 30px;
+}
+
+.book {
+  float: right;
+  width: 7rem;
+  height: 7rem;
+  border: 3px solid black;
+}
+
+.book li {
+  display: inline-block;
+}
+
+.book a {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
