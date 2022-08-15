@@ -1,0 +1,78 @@
+header nav {
+  background-color: rgba(180, 14, 14, 0.863);
+  height: 60px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+header nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 251, 251);
+}
+
+.container {
+  padding-top: 2%;
+  display: grid;
+  height: 100vh;
+
+  grid-row: repeat(2, 50%);
+  gap: 2%;
+}
+
+.box-one {
+  grid-column: 1;
+}
+
+.strip {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 2%;
+  display: flex;
+}
+
+.frame {
+  width: 8rem;
+  height: 8rem;
+  border: 8px solid black;
+  background: url(Images/image.png);
+}
+
+.box-two {
+  grid-column: 1;
+}
+
+section h1 {
+  text-align: center;
+}
+
+section p {
+  text-align: center;
+  font-size: 18px;
+}
+
+main h1 {
+  text-align: center;
+}
+
+main p {
+  text-align: center;
+  font-size: 18px;
+}
