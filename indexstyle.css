@@ -31,8 +31,6 @@ header nav ul li a:hover{
   color: black;
 }
 
-
-
 .container {
   padding-top: 2%;
   display: grid;
@@ -42,14 +40,9 @@ header nav ul li a:hover{
   gap: 2%;
 }
 
-
-
-
 section h1 {
   text-align: center;
 }
-
-
 
 section p {
   text-align: center;
