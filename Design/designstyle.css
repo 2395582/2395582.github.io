@@ -1,7 +1,7 @@
 header nav {
   background-color: rgba(180, 14, 14, 0.863);
   height: 60px;
-  margin-top: 20px;
+
   width: 100%;
 }
 
@@ -52,7 +52,7 @@ header nav ul li a {
   width: 8rem;
   height: 8rem;
   border: 8px solid black;
-  background: url(Images/image.png);
+  background: url(/2395582.github.io/Images/image.png);
 }
 
 .box-two {
