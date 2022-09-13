@@ -1,5 +1,5 @@
-fetch('https://imdb-api.com/en/API/Top250Movies/k_8b01xk7o')
-.then (response => response.json())
+//fetch('https://imdb-api.com/en/API/Top250Movies/k_8b01xk7o')
+//.then (response => response.json())
 //.then(data => console.log(data));
 
 const PLACEHOLDER_DATA = [
