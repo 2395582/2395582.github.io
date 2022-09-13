@@ -2,6 +2,7 @@
 //.then (response => response.json())
 //.then(data => console.log(data));
 
+//Attempt ?
 const PLACEHOLDER_DATA = [
     {id: "1", name: "South Africa", price: "22" },
     {id: "2", name: "USA", price: "55" },
