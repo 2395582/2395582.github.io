@@ -102,3 +102,7 @@ header nav {
     pointer-events: auto;
     opacity: 1;
   }
+
+  .one{
+   padding-left: 30%;
+  }
