@@ -9,23 +9,21 @@
     //{id: "8", name: "90s", price: "41" },
     //{id: "9", name: "2000s", price: "48" },
     //{id: "10", name: "2010s", price: "43" },
-    //{id: "10", name: "2020s", price: "7" },
+    //{id: "11", name: "2020s", price: "7" },
 //];
 
- //api fetch
+//api fetch
 async function getData(){
-    fetch('https://imdb-api.com/en/API/Top250Movies/k_8b01xk7o')
+    fetch('http://makeup-api.herokuapp.com/api/v1/products.json')
     .then(res => res.json()) // the .json() method parses the JSON response into a JS object literal
     .then(data => console.log(data));
-   
-   const api_url = "https://imdb-api.com/en/API/Top250Movies/k_8b01xk7o"; 
-   const api_data = await fetch(api_url);
-   const api_json = await api_data.json();
 
-   
-  const PLACEHOLDER_DATA = api_json.slice(0, 5);
-  console.log(PLACEHOLDER_DATA);
- 
+    const api_url = "http://makeup-api.herokuapp.com/api/v1/products.json"; 
+    const api_data = await fetch(api_url);
+    const api_json = await api_data.json();
+
+    const PLACEHOLDER_DATA = api_json.slice(0, 5);
+    console.log(PLACEHOLDER_DATA);
 
 
 let selected = PLACEHOLDER_DATA;
