@@ -143,6 +143,18 @@ header nav {
 
     }
 
+    aside p{
+      text-align: center;
+    font-size: 22px;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    }
+
+   .bold{
+    font-weight: bolder;
+    font-size: 24px;
+   }
+
     footer ul li{
      display: grid;
       align-items: center;

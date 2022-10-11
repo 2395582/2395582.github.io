@@ -1,36 +1,28 @@
-//const PLACEHOLDER_DATA = [
-    //{id: "1", name: "1920s", price: "6" },
-    //{id: "2", name: "1930s", price: "7" },
-    //{id: "3", name: "1940s", price: "12" },
-    //{id: "4", name: "1950s", price: "23" },
-    //{id: "5", name: "1960s", price: "18" },
-    //{id: "6", name: "1970s", price: "18" },
-    //{id: "7", name: "1980s", price: "27" },
-    //{id: "8", name: "1990s", price: "41" },
-    //{id: "9", name: "2000s", price: "48" },
-    //{id: "10", name: "2010s", price: "43" },
-    //{id: "10", name: "2020s", price: "7" },
-//];
-
-//cors workaround
-
-
-
+const PLACEHOLDER_DATA = [
+    {id: "1", name: "1950s", price: "1" },
+    {id: "2", name: "1960s", price: "1" },
+    {id: "3", name: "1970s", price: "2" },
+    {id: "4", name: "1980s", price: "0" },
+    {id: "5", name: "1990s", price: "3" },
+    {id: "6", name: "2000s", price: "3" },
+];
 
 
  //api fetch 
-async function getData(){
+  //async function getData(){
     //fetch('https://top-250-movies-api.herokuapp.com/api/v1/movies')
     //.then(res => res.json()) // the .json() method parses the JSON response into a JS object literal
     //.then(data => console.log(data));
    
-   const api_url = "https://top-250-movies-api.herokuapp.com/api/v1/movies"; 
-   const api_data = await fetch(api_url);
-   const api_json = await api_data.json();
+   
+
+   //const api_url = "https://top-250-movies-api.herokuapp.com/api/v1/movies"; 
+   //const api_data = await fetch(api_url);
+   //const api_json = await api_data.json();
 
    
-  const PLACEHOLDER_DATA = api_json.slice(0, 5);
-  console.log(PLACEHOLDER_DATA);
+  //const PLACEHOLDER_DATA = api_json.slice(0, 5); //I kept getting an error here when I used the original api: https://imdb-api.com/en/API/Top250Movies/k_8b01xk7o
+  //console.log(PLACEHOLDER_DATA);                // When i switched to a simpler api, like the one on this page, it still didn't work, because of a CORS issue. no amount of trouble shooting was able to resolve this, unfortunately
  
 
 
@@ -112,38 +104,37 @@ chart.append('g')
 render();
 let unselected = [];
 
-const countryList = d3.select('#data')
-.select('ul')
-.selectAll('li')
-.data(PLACEHOLDER_DATA)
-.enter()
-.append('li')
-;
+//const countryList = d3.select('#data')
+//.select('ul')
+//.selectAll('li')
+//.data(PLACEHOLDER_DATA)
+///.enter()
+//.append('li')
+//;
 
 countryList.append('span')
 .text(data => data.name)
 ;
 
 //check button
-countryList.append('input')
-.attr('type', 'checkbox')
-.attr('checked', true)
-.on('change', (event, info) => {
-   if(unselected.indexOf(info.id) === -1)
-   {
-    unselected.push(info.id);
-   }
-   else
-   {
-    unselected = unselected.filter((id) => id !== info.id);
-   }
-   selected = PLACEHOLDER_DATA.filter(
-    (d) => unselected.indexOf(d.id) === -1
-   );
-   render();
-})
-;
+//countryList.append('input')
+//.attr('type', 'checkbox')
+//.attr('checked', true)
+//.on('change', (event, info) => {
+  // if(unselected.indexOf(info.id) === -1)
+   //{
+   // unselected.push(info.id);
+  // }
+  // else
+  // {
+   // unselected = unselected.filter((id) => id !== info.id);
+   //}
+  // selected = PLACEHOLDER_DATA.filter(
+  //  (d) => unselected.indexOf(d.id) === -1
+   //);
+  // render();
+//}
 
-}
+//}
 
 getData();
