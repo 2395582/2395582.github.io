@@ -68,8 +68,10 @@ main p {
 
 main ul li{
   
-  align-items: center;
-  padding-left: 35%;
+  display: grid;
+   text-align: center;
+  padding-left: 0%;
+  padding-top: 2%;
   
 }
 

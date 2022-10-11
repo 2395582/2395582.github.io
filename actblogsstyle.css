@@ -71,8 +71,8 @@ header nav {
   }
 
   .sub{
-    background-color: rgba(185, 21, 21, 0.482);
-    padding-left: 5%;
+    text-align: center;
+    padding-left: 35rem;
     font-weight: bolder;
     font-size: 25px;
   }

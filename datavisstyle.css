@@ -67,7 +67,7 @@ header nav {
   }
   
   main ul li{
-    
+    display: grid;
     align-items: center;
     padding-left: 35%;
     
@@ -118,7 +118,7 @@ header nav {
     padding-left: 25%;
   }
 
-  .label{
+    .label{
     font-size: larger;
     font-weight: bolder;
     }
@@ -135,18 +135,18 @@ header nav {
     }
 
     div ul li{
-      list-style: none;
-font-size: larger;
-font-weight: bolder;
-padding-left: 50px;
-padding-top: 15px;
+      display: inline-block;
+      font-size: larger;
+      font-weight: bolder;
+      padding-left: 50px;
+      padding-top: 15px;
 
     }
 
     footer ul li{
-  
+     display: grid;
       align-items: center;
-      padding-left: 35%;
+      padding-left: 45%;
       
     }
     

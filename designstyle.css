@@ -67,7 +67,7 @@ main p {
 }
 
 main ul li{
-  
+  display: grid;
   align-items: center;
   padding-left: 35%;
   

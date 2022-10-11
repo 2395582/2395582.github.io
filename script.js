@@ -15,11 +15,14 @@
 //cors workaround
 
 
+
+
+
  //api fetch 
 async function getData(){
-    fetch('https://top-250-movies-api.herokuapp.com/api/v1/movies')
-    .then(res => res.json()) // the .json() method parses the JSON response into a JS object literal
-    .then(data => console.log(data));
+    //fetch('https://top-250-movies-api.herokuapp.com/api/v1/movies')
+    //.then(res => res.json()) // the .json() method parses the JSON response into a JS object literal
+    //.then(data => console.log(data));
    
    const api_url = "https://top-250-movies-api.herokuapp.com/api/v1/movies"; 
    const api_data = await fetch(api_url);
