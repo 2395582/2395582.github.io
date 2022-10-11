@@ -1,24 +1,27 @@
 //const PLACEHOLDER_DATA = [
-    //{id: "1", name: "1920", price: "6" },
-    //{id: "2", name: "1930", price: "7" },
-    //{id: "3", name: "1940", price: "12" },
-    //{id: "4", name: "1950", price: "23" },
-    //{id: "5", name: "1960", price: "18" },
-    //{id: "6", name: "70s", price: "18" },
-    //{id: "7", name: "80s", price: "27" },
-    //{id: "8", name: "90s", price: "41" },
+    //{id: "1", name: "1920s", price: "6" },
+    //{id: "2", name: "1930s", price: "7" },
+    //{id: "3", name: "1940s", price: "12" },
+    //{id: "4", name: "1950s", price: "23" },
+    //{id: "5", name: "1960s", price: "18" },
+    //{id: "6", name: "1970s", price: "18" },
+    //{id: "7", name: "1980s", price: "27" },
+    //{id: "8", name: "1990s", price: "41" },
     //{id: "9", name: "2000s", price: "48" },
     //{id: "10", name: "2010s", price: "43" },
     //{id: "10", name: "2020s", price: "7" },
 //];
 
- //api fetch
+//cors workaround
+
+
+ //api fetch 
 async function getData(){
-    fetch('https://imdb-api.com/en/API/Top250Movies/k_8b01xk7o')
+    fetch('https://top-250-movies-api.herokuapp.com/api/v1/movies')
     .then(res => res.json()) // the .json() method parses the JSON response into a JS object literal
     .then(data => console.log(data));
    
-   const api_url = "https://imdb-api.com/en/API/Top250Movies/k_8b01xk7o"; 
+   const api_url = "https://top-250-movies-api.herokuapp.com/api/v1/movies"; 
    const api_data = await fetch(api_url);
    const api_json = await api_data.json();
 
