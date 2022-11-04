@@ -1,3 +1,11 @@
+body {
+  background: url(/2395582.github.io/Images/magic.png) no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  height: 100%;
+  color: aliceblue;
+}
+
 header nav {
   background-color: rgba(180, 14, 14, 0.863);
   height: 60px;
@@ -79,7 +87,7 @@ main ul li a {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: black;
+  color: aliceblue;
 }
 
 main ul li a:hover{

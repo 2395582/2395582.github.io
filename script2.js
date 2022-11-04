@@ -76,6 +76,7 @@ chart.selectAll('.label')
 .enter()
 .append('text')
 .text(data => data.price)
+.style('fill', 'rgb(240, 248, 255)')
 .attr('x', data => xScale(data.name) + (xScale.bandwidth()/2))
 .attr('y', data => yScale(data.price) - 10)
 .attr('text-anchor' , 'middle')
@@ -96,6 +97,26 @@ chart.append('g')
 .attr('color' , '#000000')
 .classed('axis' , true)
 .attr('transform' , `translate(0, ${HEIGHT})`) //Move x axis
+;
+
+//KEY TEST
+chart.append('g')
+.append('text')
+.text('DECADES')
+.attr('fill', 'white')
+.attr('text-anchor' , 'middle')
+.attr('x', WIDTH-300)
+.attr('y', HEIGHT+40)
+;
+
+//key test 2
+chart.append('text')
+//.attr('class', 'y label')
+.attr('text-anchor', 'end')
+.attr('dy', '.9em')
+.attr('fill', 'white')
+.attr('transform', 'rotate(-90)')
+.text('TIMES PRESENT IN LIST')
 ;
 
 

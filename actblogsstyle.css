@@ -1,3 +1,11 @@
+body {
+  background: url(/2395582.github.io/Images/magic.png) no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  color: aliceblue;
+}
+
 header nav {
     background-color: rgba(180, 14, 14, 0.863);
     height: 60px;
@@ -72,7 +80,7 @@ header nav {
 
   .sub{
     text-align: center;
-    padding-left: 35rem;
+    /*padding-left: 35rem;*/
     font-weight: bolder;
     font-size: 25px;
   }
@@ -106,6 +114,29 @@ header nav {
   .one{
    padding-left: 30%;
   }
+
+  .cloud{
+    padding-left: 19%;
+  }
+
+  main ul li{
+    display: grid;
+     align-items: center;
+     padding-left: 45%;
+     
+   }
+   
+   main ul li a {
+     list-style: none;
+     font-size: 30px;
+     font-weight: bold;
+     text-decoration: none;
+     color: aliceblue;
+   }
+   
+   main ul li a:hover{
+     color: rgba(180, 14, 14, 0.863);
+   }
 
   footer nav {
     background-color: rgba(180, 14, 14, 0.863);
