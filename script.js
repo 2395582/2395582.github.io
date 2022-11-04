@@ -116,7 +116,7 @@ chart.append('text')
 .attr('dy', '.9em')
 .attr('fill', 'white')
 .attr('transform', 'rotate(-90)')
-.text('TIMES PRESENT IN LIST')
+.text('NUMBER OF MOVIES IN IMDb LIST (Top Ten)')
 ;
 
 

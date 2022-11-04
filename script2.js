@@ -1,9 +1,9 @@
 const PLACEHOLDER_DATA = [
  
-    {id: "2", name: "1930", price: "2" },
-    {id: "3", name: "1940", price: "2" },
-    {id: "4", name: "1950", price: "3" },
-    {id: "5", name: "1960", price: "4" },
+    {id: "2", name: "1930s", price: "2" },
+    {id: "3", name: "1940s", price: "2" },
+    {id: "4", name: "1950s", price: "3" },
+    {id: "5", name: "1960s", price: "4" },
     {id: "6", name: "1970s", price: "4" },
     {id: "7", name: "1980s", price: "3" },
     {id: "8", name: "1990s", price: "17" },
@@ -51,7 +51,8 @@ yScale.domain([0, d3.max(PLACEHOLDER_DATA, (d) => d.price) + 1 ]);
 
 function render() 
 {
-    //draw bars
+
+//draw bars
 chart.selectAll('.bar')
 .data(selected, data => data.id)
 .enter()
@@ -62,12 +63,6 @@ chart.selectAll('.bar')
 .attr('y' , data => yScale(data.price))
 .style('fill' , 'rgba(180, 14, 14, 0.863)')
 ;
-
-//remove bars
-chart.selectAll('rect')
-.data(selected, data => data.id)
-.exit()
-.remove();
 
 
 //draw labels
@@ -83,12 +78,6 @@ chart.selectAll('.label')
 .classed('label', true) //this is style//
 ;
 
-//remove labels
-chart.selectAll('.label')
-.data(selected, data => data.id)
-.exit()
-.remove()
-;
 }
 
 //draw x-axis
@@ -99,7 +88,7 @@ chart.append('g')
 .attr('transform' , `translate(0, ${HEIGHT})`) //Move x axis
 ;
 
-//KEY TEST
+//KEY 
 chart.append('g')
 .append('text')
 .text('DECADES')
@@ -109,30 +98,23 @@ chart.append('g')
 .attr('y', HEIGHT+40)
 ;
 
-//key test 2
+//KEY (Y)
 chart.append('text')
 //.attr('class', 'y label')
 .attr('text-anchor', 'end')
 .attr('dy', '.9em')
 .attr('fill', 'white')
 .attr('transform', 'rotate(-90)')
-.text('TIMES PRESENT IN LIST')
+.text('NUMBER OF MOVIES IN IMDb LIST (Top 50)')
 ;
-
 
 
 //INTERACTIVE IMPLEMENTATION
 render();
 let unselected = [];
 
-
 countryList.append('span')
 .text(data => data.name)
 ;
-
-
-
-
-//}
 
 getData();

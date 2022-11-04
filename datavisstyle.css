@@ -126,11 +126,20 @@ header nav {
     padding-left: 25%;
   }
 
-    .label{
+  .label{
     font-size: larger;
     font-weight: bolder;
-    color: aliceblue;
-    }
+    
+  }
+
+  .percent{
+    font-size: larger;
+    font-weight: bolder;
+    
+  }
+
+
+   
     
     .axis{
         font-size: larger;
@@ -141,6 +150,8 @@ header nav {
     .top{
       color: rgb(240, 248, 255);
     }
+
+    
 
     div ul{
       float: right;
