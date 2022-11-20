@@ -4,55 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Movies, Film, Highest Grossing">
-    <meta name="description" content="A collection of blogs">
-    <meta name="author" content="Muhammad Seedat">
+    <meta
+      name="keywords"
+      content="Data-Art, Data-Visualizations, UI/UX, Interaction"
+    />
+    <meta name="description" content="A collection of blogs" />
+    <meta name="author" content="Muhammad Seedat" />
     <title>Blogs</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="blogsstyle.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="main-menu" class="navigation">
         <label for="logo" class="logo">Movie Magic Over Time</label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-          </div>
-
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="design.html">Design</a></li>
-          <li>
-            <a href="datavis.html">Data-Visualisations</a>
-          </li>
-          <li><a href="dataart.html">Data-Art</a></li>
-        </ul>
       </nav>
     </header>
+    <script>
+      const navigationData = [
+        { title: "Home", link: "../index.html" },
+        { title: "Blogs", link: "../blogs.html" },
+        { title: "Design", link: "../design.html" },
+        { title: "Data Visualizations", link: "../datavis.html" },
+        { title: "Data-Art", link: "../dataart.html" },
+        { title: "Exam Data-Art", link: "../examdataart.html" },
+      ];
+
+      const navigations = document.getElementsByClassName("navigation");
+
+      for (var i = 0; i < navigations.length; i++) {
+        let list = document.createElement("ul");
+
+        for (var j = 0; j < navigationData.length; j++) {
+          let listItemLink = document.createElement("a");
+          listItemLink.innerText = navigationData[j].title;
+          listItemLink.setAttribute("href", navigationData[j].link);
+          let listItem = document.createElement("li");
+          listItem.appendChild(listItemLink);
+          list.appendChild(listItem);
+        }
+
+        navigations[i].appendChild(list);
+      }
+    </script>
     <div class="container">
-      
-        <section>
-          <h1>BLOGS</h1>
-          <p>These are the blog posts I have written thus far. Along with the updated version of the UI/UX reflection, there is a link to the old one.</p>
+      <section>
+        <h1>BLOGS</h1>
+        <p>
+          These are the blog posts I have written thus far. Along with the
+          updated version of the UI/UX reflection, there is a link to the old
+          one.
+        </p>
+      </section>
 
-          
-        </section>
-     
-
-     
-        <main>
-          <ul>
-          <li><a href="blog1.html">Overview of Data Visualization – A Close Reading</a></li>
+      <main>
+        <ul>
+          <li>
+            <a href="blog1.html"
+              >Overview of Data Visualization – A Close Reading</a
+            >
+          </li>
           <li><a href="blog2.html">Critical Reflection</a></li>
           <li><a href="blog3.html">Critical Reflection Revisited</a></li>
-          <li><a href="blog4.html">What is Interaction for Data Visualization? - A Close Reading</a></li>
-          <li><a href="blog5.html">My Data Driven Artwork - A Critical Reflection</a></li>
-          <li><a href="blog6.html">Data Visualization, Data Art, and their Strategies of Representation.</a></li>
-         </ul>
-        </main>
-            
-        
-      </div>
-    
+          <li>
+            <a href="blog4.html"
+              >What is Interaction for Data Visualization? - A Close Reading</a
+            >
+          </li>
+          <li>
+            <a href="blog5.html"
+              >My Data Driven Artwork - A Critical Reflection</a
+            >
+          </li>
+          <li>
+            <a href="blog6.html"
+              >Data Visualization, Data Art, and their Strategies of
+              Representation.</a
+            >
+          </li>
+        </ul>
+      </main>
+    </div>
   </body>
   <footer>
     <nav>
@@ -61,14 +93,12 @@
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="design.html">Design</a></li>
         <li>
-          <a href="datavis.html"
-            >Data-Visualisations</a
-          >
+          <a href="datavis.html">Data-Visualisations</a>
         </li>
         <li>
           <a href="dataart.html">Data-Art</a>
         </li>
       </ul>
-    </nav> 
+    </nav>
   </footer>
 </html>
