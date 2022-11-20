@@ -4,167 +4,232 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Movies, Film, Highest Grossing">
-    <meta name="description" content="An indepth refelction of my UI/UX">
-    <meta name="author" content="Muhammad Seedat">
+    <meta name="keywords" content="Movies, Film, Highest Grossing" />
+    <meta name="description" content="An indepth refelction of my UI/UX" />
+    <meta name="author" content="Muhammad Seedat" />
     <title>Critical Reflection Revisited</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="actblogsstyle.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="main-menu" class="navigation">
         <label for="logo" class="logo">Movie Magic Over Time</label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-          </div>
+      </nav>
+      <script>
+        const navigationData = [
+          { title: "Home", link: "../index.html" },
+          { title: "Blogs", link: "../blogs.html" },
+          { title: "Design", link: "../design.html" },
+          { title: "Data Visualizations", link: "../datavis.html" },
+          { title: "Data-Art", link: "../dataart.html" },
+          { title: "Exam Data-Art", link: "../examdataart.html" },
+        ];
 
+        const navigations = document.getElementsByClassName("navigation");
+
+        for (var i = 0; i < navigations.length; i++) {
+          let list = document.createElement("ul");
+
+          for (var j = 0; j < navigationData.length; j++) {
+            let listItemLink = document.createElement("a");
+            listItemLink.innerText = navigationData[j].title;
+            listItemLink.setAttribute("href", navigationData[j].link);
+            let listItem = document.createElement("li");
+            listItem.appendChild(listItemLink);
+            list.appendChild(listItem);
+          }
+
+          navigations[i].appendChild(list);
+        }
+      </script>
+    </header>
+    <section>
+      <h1>Critical Reflection Revisited</h1>
+      <p class="quote">
+        Design is the conscious and intuitive effort to impose meaningful order.
+      </p>
+      <p>(Papanek, 1984, p. 4).</p>
+      <p>
+        In this critical reflection of my UI and UX as presented in my prototype
+        website one, I will be going in depth of the process whereby I made said
+        conscious and intuitive effort to impose meaningful order, or where I
+        failed to do so.
+      </p>
+    </section>
+
+    <main>
+      <p class="sub">CLARITY & FAMILIARITY</p>
+      <p class="quote">Conventions refer to shared practices.</p>
+      <p>(Mailloux, 1983, p. 399).</p>
+      <p>
+        My website uses conventional practices of navigation to foster
+        communication with the user, setting up expectations of behaviour. The
+        navigation bar at the top of each page is key to this. It contains the
+        name of the website, as well as the requisite links to the various
+        pages.
+      </p>
+      <p>
+        The navigation bar is styled in such a way as to make it stand out, with
+        a red colour and white text. The text is bold and stands out against the
+        red. Red, being a decidedly weighty colour was used consistently
+        throughout the pages. This makes the navigation bar easy to find, with
+        its almost magnetic allure. The shape of it creates a border at the top
+        of the page, and its large size is in accordance with Fitts’ Law
+        (Goldberg, 202?, p.6).
+      </p>
+      <p>
+        This navigation bar sets up most of the necessary communication with the
+        user. The pages themselves contain headings, which are generally larger
+        than the main text of the page. This assists in clarity by providing a
+        hierarchy of information. On the blogs page this is especially true,
+        with negative space used to streamline the reading of the blogs. The
+        blogs are narrow, with a legible font.
+      </p>
+      <p>
+        The navigation bar, could however, be improved. Across all pages it
+        stays anchored to the top of the page, and although this was done in the
+        name of consistency, recent feedback had alluded to the fact that a more
+        constant means of navigation would be better, either a floating bar, or
+        at the very least a back-to-top button, which will snap users
+        immediately back to the navigation bar. This would aid in making
+        increased communication with the user.
+      </p>
+
+      <p class="sub">CONTROL & NAVIGATION</p>
+      <p class="quote">Help the user achieve their goals with the next step.</p>
+      <p>(UXPin, 2022, p.5)</p>
+      <p>
+        Communication about what is happening, and where the user is on my
+        website is rudimentary and while somewhat acceptable could be improved.
+      </p>
+      <p>
+        Again, the navigation bar is the main driver in this communication. It
+        supplies consistent navigation throughout the various pages across the
+        website. This is in the form of links, held conventionally, on the right
+        side of the bar. This leaves each page at the fingertip, or cursortip,
+        of the user. Communication on location is supplied with a simple heading
+        at the top of the page. These headings are generally bold and centred,
+        in keeping with the hierarchy of information.
+      </p>
+      <p>
+        A second, more inconsistent driver of this communication is the addition
+        of ‘filmstrips.’ Decorations which both, make sense in keeping with the
+        context of the website and help to align the user’s attention. On some
+        pages, such as the blogs and design pages, the filmstrips isolate the
+        important content of the page. As soon as the user scrolls in between
+        these two strips, they are greeted with said content.
+      </p>
+      <p>
+        Both these elements could be improved, in order to improve the control
+        and navigation. The links on the navigation bar could be made to change
+        on-hover and the link of the current page could be permanently
+        highlighted to avoid any confusion of current location. The headings
+        stating said location could also be improved. By making them bigger and
+        heavier, and consistently aligned across all pages this communication
+        will no longer be in danger of being lost. The filmstrips are badly
+        aligned, and as such their position can be changed in order to achieve a
+        more professional, and complete look and feel.
+      </p>
+
+      <p class="sub">INFORMATION HIERARCHY</p>
+      <p class="quote">
+        The most important elements (or content) should appear to be the most
+        important.
+      </p>
+      <p>(Goldberg, 202?, p.22)</p>
+      <p>
+        Information hierarchy on my website is quite inconsistent. This has a
+        definite affect on the hierarchy. It damn near topples it. (Pardon my
+        French)
+      </p>
+      <p>
+        I have already mentioned the inconsistently weighted page headings,
+        which are mal-aligned, and sometimes not as bold as they should be. This
+        ruins any sense of ‘heading’ the words may possess, especially when it
+        is done correctly on other pages.
+      </p>
+      <p>
+        The filmstrip decorations do somewhat remedy the hierarchy, by boxing in
+        the main content of the page. But as they are similarly mal-aligned the
+        intended affect is lost, and they are left to float about almost
+        arbitrarily.
+      </p>
+      <p>
+        The blog page is at least nicely aligned, with the main content taking
+        full advantage of negative space, to appear narrow and less daunting.
+        This greatly helps with the reading of the blogs, although it could be
+        improved with the use of headings in order to separate different
+        paragraphs and create a sense of ‘chunking’.
+      </p>
+
+      <p class="sub">FLEXIBILITY</p>
+      <p class="quote">I’ll be skipping yoga class, cause I have none.</p>
+      <p>(Me, on Flexibility)</p>
+      <p>
+        In all seriousness, there is almost no element of flexibility on my
+        site. On smaller viewports the navigation disappears, and any
+        improvement made in this regard would be a welcome one.
+      </p>
+
+      <p class="sub">ACCESSIBILITY</p>
+      <p class="quote">
+        One final thought to remember when designing a user interface, you will
+        never successfully appeal to everyone. You can do your best to appeal to
+        most.
+      </p>
+      <p>(UXPin, 2022, p.5)</p>
+      <p>
+        The structure and layout of my website is useful in creating
+        accessibility. I have already spoke on (the now infamous) blog page,
+        where blogs are made streamlined, in order to make it an accessible
+        read.
+      </p>
+      <p>
+        Negative space is used throughout to avoid clutter and make the pages
+        less busy and harsh on the eyes. The stark white colour of these
+        negative spaces does however have an inverse effect, making it quite
+        harsh regardless.
+      </p>
+      <p>
+        The images have no real alternative texts, but as mostly arbitrary
+        designs this is somewhat forgivable.
+      </p>
+
+      <p class="sub">CONCLUSION</p>
+      <p class="quote">That’s the way it crumbles, cookie-wise.</p>
+      <p>(B. Wilder, The Apartment, 1960)</p>
+      <p>
+        In conclusion, my UI/UX, while satisfactory in some regards, could use
+        some definite improvements. By being more conscious in my design, I
+        could, hopefully, achieve said improvements.
+      </p>
+
+      <ul>
+        <li>
+          <a href="blog4.html">NEXT</a>
+        </li>
+        <li>
+          <a href="blog2.html">PREVIOUS</a>
+        </li>
+      </ul>
+    </main>
+    <a href="#" class="to-top">TOP</a>
+    <script src="button.js"></script>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="blogs.html">Blogs</a></li>
           <li><a href="design.html">Design</a></li>
           <li>
             <a href="datavis.html">Data-Visualisations</a>
           </li>
-          <li><a href="dataart.html">Data-Art</a></li>
+          <li>
+            <a href="dataart.html">Data-Art</a>
+          </li>
         </ul>
       </nav>
-    </header>
-    <section>
-        <h1>Critical Reflection Revisited</h1>
-        <p class="quote">
-            Design is the conscious and intuitive effort to impose meaningful order.
-        </p>
-        <p>
-            (Papanek, 1984, p. 4).
-        </p>
-        <p>
-            In this critical reflection of my UI and UX as presented in my prototype website one, I will be going in depth of the process whereby I made said conscious and intuitive effort to impose meaningful order, or where I failed to do so.
-        </p>
-    </section>
-  
-
-    <main>
-     <p class="sub">CLARITY & FAMILIARITY</p>
-      <p class="quote">Conventions refer to shared practices.</p>
-      <p>
-        (Mailloux, 1983, p. 399).
-      </p>
-      <p>
-        My website uses conventional practices of navigation to foster communication with the user, setting up expectations of behaviour. The navigation bar at the top of each page is key to this. It contains the name of the website, as well as the requisite links to the various pages. 
-      </p>
-      <p>
-        The navigation bar is styled in such a way as to make it stand out, with a red colour and white text. The text is bold and stands out against the red. Red, being a decidedly weighty colour was used consistently throughout the pages. This makes the navigation bar easy to find, with its almost magnetic allure. The shape of it creates a border at the top of the page, and its large size is in accordance with Fitts’ Law (Goldberg, 202?, p.6).
-      </p>
-      <p>
-        This navigation bar sets up most of the necessary communication with the user. The pages themselves contain headings, which are generally larger than the main text of the page. This assists in clarity by providing a hierarchy of information. On the blogs page this is especially true, with negative space used to streamline the reading of the blogs. The blogs are narrow, with a legible font.
-      </p>
-      <p>
-        The navigation bar, could however, be improved. Across all pages it stays anchored to the top of the page, and although this was done in the name of consistency, recent feedback had alluded to the fact that a more constant means of navigation would be better, either a floating bar, or at the very least a back-to-top button, which will snap users immediately back to the navigation bar. This would aid in making increased communication with the user.
-      </p>
-
-      <p class="sub">CONTROL & NAVIGATION</p>
-      <p class="quote">Help the user achieve their goals with the next step.</p>
-      <p>
-        (UXPin, 2022, p.5)
-      </p>
-      <p>
-        Communication about what is happening, and where the user is on my website is rudimentary and while somewhat acceptable could be improved.
-      </p>
-      <p>
-        Again, the navigation bar is the main driver in this communication. It supplies consistent navigation throughout the various pages across the website. This is in the form of links, held conventionally, on the right side of the bar. This leaves each page at the fingertip, or cursortip, of the user. Communication on location is supplied with a simple heading at the top of the page. These headings are generally bold and centred, in keeping with the hierarchy of information.
-      </p>
-      <p>
-        A second, more inconsistent driver of this communication is the addition of ‘filmstrips.’ Decorations which both, make sense in keeping with the context of the website and help to align the user’s attention. On some pages, such as the blogs and design pages, the filmstrips isolate the important content of the page. As soon as the user scrolls in between these two strips, they are greeted with said content.
-      </p>
-      <p>
-        Both these elements could be improved, in order to improve the control and navigation. The links on the navigation bar could be made to change on-hover and the link of the current page could be permanently highlighted to avoid any confusion of current location. The headings stating said location could also be improved. By making them bigger and heavier, and consistently aligned across all pages this communication will no longer be in danger of being lost. The filmstrips are badly aligned, and as such their position can be changed in order to achieve a more professional, and complete look and feel.
-      </p>
-
-      <p class="sub">INFORMATION HIERARCHY</p>
-      <p class="quote">The most important elements (or content) should appear to be the most important.</p>
-      <p>
-        (Goldberg, 202?, p.22)
-      </p>
-      <p>
-        Information hierarchy on my website is quite inconsistent. This has a definite affect on the hierarchy. It damn near topples it. (Pardon my French)
-      </p>
-      <p>
-        I have already mentioned the inconsistently weighted page headings, which are mal-aligned, and sometimes not as bold as they should be. This ruins any sense of ‘heading’ the words may possess, especially when it is done correctly on other pages. 
-      </p>
-      <p>
-        The filmstrip decorations do somewhat remedy the hierarchy, by boxing in the main content of the page. But as they are similarly mal-aligned the intended affect is lost, and they are left to float about almost arbitrarily. 
-      </p>
-      <p>
-        The blog page is at least nicely aligned, with the main content taking full advantage of negative space, to appear narrow and less daunting. This greatly helps with the reading of the blogs, although it could be improved with the use of headings in order to separate different paragraphs and create a sense of ‘chunking’. 
-      </p>
-    
-      <p class="sub">FLEXIBILITY</p>
-      <p class="quote">
-        I’ll be skipping yoga class, cause I have none.
-      </p>
-      <p>
-        (Me, on Flexibility)
-      </p>
-      <p>
-        In all seriousness, there is almost no element of flexibility on my site. On smaller viewports the navigation disappears, and any improvement made in this regard would be a welcome one.
-      </p>
-
-      <p class="sub">
-        ACCESSIBILITY
-      </p>
-      <p class="quote">
-        One final thought to remember when designing a user interface, you will never successfully appeal to everyone. You can do your best to appeal to most.
-      </p>
-      <p>
-        (UXPin, 2022, p.5)
-      </p>
-      <p>
-        The structure and layout of my website is useful in creating accessibility. I have already spoke on (the now infamous) blog page, where blogs are made streamlined, in order to make it an accessible read. 
-      </p>
-      <p>
-        Negative space is used throughout to avoid clutter and make the pages less busy and harsh on the eyes. The stark white colour of these negative spaces does however have an inverse effect, making it quite harsh regardless.
-      </p>
-      <p>
-        The images have no real alternative texts, but as mostly arbitrary designs this is somewhat forgivable.
-      </p>
-
-      <p class="sub">
-           CONCLUSION
-      </p>
-            <p class="quote">
-                That’s the way it crumbles, cookie-wise.
-            </p>
-            <p>
-                (B. Wilder, The Apartment, 1960)
-            </p>
-            <p>
-                In conclusion, my UI/UX, while satisfactory in some regards, could use some definite improvements. By being more conscious in my design, I could, hopefully, achieve said improvements.
-            </p>
-
-            <ul>
-              <li>
-                <a href="blog4.html">NEXT</a>
-              </li>
-              <li>
-                <a href="blog2.html">PREVIOUS</a>
-              </li>
-            </ul>
-    </main>
-    <a href="#" class="to-top">TOP</a>
-      <script src="button.js"></script>
-      <footer>
-        <nav>
-          <ul> 
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li>
-              <a href="datavis.html">Data-Visualisations</a>
-            </li>
-            <li>
-              <a href="dataart.html">Data-Art</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
+    </footer>
   </body>
 </html>

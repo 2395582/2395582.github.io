@@ -4,127 +4,198 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Movies, Film, Highest Grossing">
-    <meta name="description" content="A critical reflection of my UI/UX">
-    <meta name="author" content="Muhammad Seedat">
+    <meta name="keywords" content="Movies, Film, Highest Grossing" />
+    <meta name="description" content="A critical reflection of my UI/UX" />
+    <meta name="author" content="Muhammad Seedat" />
     <title>Critical Reflection</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="actblogsstyle.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="main-menu" class="navigation">
         <label for="logo" class="logo">Movie Magic Over Time</label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-          </div>
+      </nav>
+      <script>
+        const navigationData = [
+          { title: "Home", link: "../index.html" },
+          { title: "Blogs", link: "../blogs.html" },
+          { title: "Design", link: "../design.html" },
+          { title: "Data Visualizations", link: "../datavis.html" },
+          { title: "Data-Art", link: "../dataart.html" },
+          { title: "Exam Data-Art", link: "../examdataart.html" },
+        ];
 
+        const navigations = document.getElementsByClassName("navigation");
+
+        for (var i = 0; i < navigations.length; i++) {
+          let list = document.createElement("ul");
+
+          for (var j = 0; j < navigationData.length; j++) {
+            let listItemLink = document.createElement("a");
+            listItemLink.innerText = navigationData[j].title;
+            listItemLink.setAttribute("href", navigationData[j].link);
+            let listItem = document.createElement("li");
+            listItem.appendChild(listItemLink);
+            list.appendChild(listItem);
+          }
+
+          navigations[i].appendChild(list);
+        }
+      </script>
+    </header>
+    <main>
+      <h1>Styleguide</h1>
+      <p>
+        I have made quite a few changes from the prototype, and will address
+        these first.
+      </p>
+      <p>
+        I removed the 'filmstrip' decoration, as no matter how I styled it, I
+        couldn't quite save it from being defined as 'clutter.' Wherever I
+        placed it, it just seemed to float around. I like how the site looks
+        without it, and find it much easier to navigate.
+      </p>
+      <p>
+        I went with the same red color, because I believe it stands out, against
+        the starl white background. It makes the navigation bars easily
+        identifiable, as well as the back to top button.
+      </p>
+      <p>
+        I have styled the links to change color on hover, just to add to the
+        user experience.
+      </p>
+      <p>
+        The font is easy to read. I have aligned all text along the center of
+        the page, to make the readig experience more streamlined, by making the
+        'viewport' narrower. The headings are naturally made bolder, and bigger.
+        Where applicable, I have chunked up long pieces, into smaller ones,
+        using subheadings.
+      </p>
+      <p>
+        I believe this makes large documents less daunting, and more user
+        friendly.
+      </p>
+      <p>
+        Besides the removal of the arbitrary decorations, the site has stayed
+        looking mostly the same. I still believe that this simple look, makes
+        for easy navigation and perusal.
+      </p>
+      <p>
+        I added the footer to round out the pages, and provide more navigation.
+        The same with the back to top button. The footer has been removed from
+        pages where the main content is text, simply to avoid any distractions
+        from conclusions in the text. The button is still present to make
+        navigatig back to the top, a simple affair.
+      </p>
+      <p>
+        Below is the first iteration of my wireframe, followed by more recent
+        ones.
+      </p>
+      <img src="Images/wireframe.png" alt="My First Wireframe" class="one" />
+      <img
+        src="Images/wireframe2.png"
+        alt="Wireframe - Second Iteration"
+        class="one"
+      />
+      <p>
+        In the second wireframe, as you can see, I have removed the filmstrip. I
+        have numbered the elements I would like to speak about.
+      </p>
+      <p>
+        At position 1, is the logo. This is the name for the site, displayed in
+        the largest font size on any given page. This serves as a constant
+        reminder of the sites name, and content.
+      </p>
+      <p>
+        At position 2, the links in the top nav bar. This provided linkage
+        between all pages on the site. As I have mentioned, these links will
+        change on hover. The font size is smaller than the logo, but remains big
+        enough to be seen. The white color on the red background gives the links
+        and the logo, a popping effect. Users will be able to differentiate
+        between logo and links due to the size difference, and the fact that
+        links turn black on hover. The black color remains visible, so the link
+        does not dissapear, on hover.
+      </p>
+      <p>
+        At 7, is the page title, telling the user which page of the site they
+        are on.
+      </p>
+      <p>
+        At 3, is the introductory text, informing the user on what can be found
+        on this page.
+      </p>
+      <p>
+        At 4, in the center of the page, both horizontally and vertically, is
+        nested the main content. This makes it easy to navigate to. In the case
+        of the main content being links, the links are bold and change color on
+        hover, using the inverse of the colors used in the nav bar. If the main
+        content is text, the text is alligned along the center, again to
+        streamline the reading process.
+      </p>
+      <p>
+        5 is the back to top button, providing easy navigation, particularly on
+        text heavy pages such as this one. The button floats, and moves with the
+        screen, so the user can return at any time, not just when they reach the
+        end.
+      </p>
+      <p>
+        6 is the footer bar, along with the links to the pages. Had I been
+        inclined to share social media information, I would've added it here.
+        The extra links give more oppurtunities for navigation should the user
+        require it.
+      </p>
+      <p>Below is the design of my graph.</p>
+      <img src="Images/graphs.png" alt="A rendering of my graph" class="one" />
+      <p>
+        The graph would show the which decade had the most top rated movies, as
+        per the list. Along the y-axis, would be the number of times the decade
+        has been represented within the list. Along the x-axis would be the
+        decades. The taller the bar, the more top rated movies the decade has.
+      </p>
+      <p>
+        The color of the axis, would be a simple black to stand out against the
+        white background. The red bars would be the same color as the nav bar,
+        in keeping with the simple color palette. Although its not shown here,
+        the bars would be filled red, not just red outlined.
+      </p>
+      <p>
+        At position 1 is the y-axis, the number of times the decade has appeared
+        in the list.
+      </p>
+      <p>2 is the x-axis, showing the decade.</p>
+      <p>
+        3 refers to the bars which would be used to portray this information.
+      </p>
+      <p>
+        The graph will end up portraying which decade has, what IMDb, considers
+        the most cultural importance, in terms of movies. I believe this is an
+        interesting answer in the debate on wether or not movies used to be
+        better.
+      </p>
+      <p>
+        On a side note, this was not the original plan for this website, but as
+        I could not find an appropriate API for the other idea, I had change my
+        plan.
+      </p>
+    </main>
+
+    <a href="#" class="to-top">TOP</a>
+    <script src="button.js"></script>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="blogs.html">Blogs</a></li>
           <li><a href="design.html">Design</a></li>
           <li>
             <a href="datavis.html">Data-Visualisations</a>
           </li>
-          <li><a href="dataart.html">Data-Art</a></li>
+          <li>
+            <a href="dataart.html">Data-Art</a>
+          </li>
         </ul>
       </nav>
-    </header>
-    <main>
-    <h1>Styleguide</h1>
-    <p>I have made quite a few changes from the prototype, and will address these first.</p>
-    <p>
-      I removed the 'filmstrip' decoration, as no matter how I styled it, I couldn't quite save it from being defined as 'clutter.'
-      Wherever I placed it, it just seemed to float around. I like how the site looks without it, and find it much easier to navigate.
-    </p>
-    <p>
-      I went with the same red color, because I believe it stands out, against the starl white background. It makes the navigation bars easily identifiable, as well as the back to top button.
-    </p>
-    <p>
-      I have styled the links to change color on hover, just to add to the user experience.
-    </p>
-    <p>
-      The font is easy to read. I have aligned all text along the center of the page, to make the readig experience more streamlined, by making the 'viewport' narrower. The headings are naturally made bolder, and bigger. Where applicable, I have chunked up long pieces, into smaller ones, using subheadings.
-    </p>
-    <p>
-      I believe this makes large documents less daunting, and more user friendly.
-    </p>
-    <p>
-      Besides the removal of the arbitrary decorations, the site has stayed looking mostly the same. I still believe that this simple look, makes for easy navigation and perusal.
-    </p>
-    <p>
-      I added the footer to round out the pages, and provide more navigation. The same with the back to top button. The footer has been removed from pages where the main content is text, simply to avoid any distractions from conclusions in the text. The button is still present to make navigatig back to the top, a simple affair.
-    </p>
-    <p>
-      Below is the first iteration of my wireframe, followed by more recent ones.
-    </p>
-    <img src="Images/wireframe.png" alt="My First Wireframe" class="one">
-    <img src="Images/wireframe2.png" alt="Wireframe - Second Iteration" class="one">
-    <p>
-      In the second wireframe, as you can see, I have removed the filmstrip. I have numbered the elements I would like to speak about.
-    </p>
-    <p>
-      At position 1, is the logo. This is the name for the site, displayed in the largest font size on any given page. This serves as a constant reminder of the sites name, and content.
-    </p>
-    <p>
-      At position 2, the links in the top nav bar. This provided linkage between all pages on the site. As I have mentioned, these links will change on hover. The font size is smaller than the logo, but remains big enough to be seen. The white color on the red background gives the links and the logo, a popping effect. Users will be able to differentiate between logo and links due to the size difference, and the fact that links turn black on hover. The black color remains visible, so the link does not dissapear, on hover.
-    </p>
-    <p>
-      At 7, is the page title, telling the user which page of the site they are on.
-    </p>
-    <p>
-      At 3, is the introductory text, informing the user on what can be found on this page.
-    </p>
-    <p>
-      At 4, in the center of the page, both horizontally and vertically, is nested the main content. This makes it easy to navigate to. In the case of the main content being links, the links are bold and change color on hover, using the inverse of the colors used in the nav bar. If the main content is text, the text is alligned along the center, again to streamline the reading process.
-    </p>
-    <p>
-      5 is the back to top button, providing easy navigation, particularly on text heavy pages such as this one. The button floats, and moves with the screen, so the user can return at any time, not just when they reach the end.
-    </p>
-    <p>
-      6 is the footer bar, along with the links to the pages. Had I been inclined to share social media information, I would've added it here. The extra links give more oppurtunities for navigation should the user require it.
-    </p>
-    <p>
-      Below is the design of my graph.
-    </p>
-    <img src="Images/graphs.png" alt="A rendering of my graph" class="one">
-    <p>
-      The graph would show the which decade had the most top rated movies, as per the list. Along the y-axis, would be the number of times the decade has been represented within the list. Along the x-axis would be the decades. The taller the bar, the more top rated movies the decade has.
-    </p>
-    <p>
-      The color of the axis, would be a simple black to stand out against the white background. The red bars would be the same color as the nav bar, in keeping with the simple color palette. Although its not shown here, the bars would be filled red, not just red outlined.
-    </p>
-    <p>
-      At position 1 is the y-axis, the number of times the decade has appeared in the list.
-    </p>
-    <p>
-      2 is the x-axis, showing the decade.
-    </p>
-    <p>
-      3 refers to the bars which would be used to portray this information.
-    </p>
-    <p>
-      The graph will end up portraying which decade has, what IMDb, considers the most cultural importance, in terms of movies. I believe this is an interesting answer in the debate on wether or not movies used to be better.
-    </p>
-    <p>
-      On a side note, this was not the original plan for this website, but as I could not find an appropriate API for the other idea, I had change my plan.
-    </p>
-    </main>
-    
-    <a href="#" class="to-top">TOP</a>
-      <script src="button.js"></script>
-      <footer>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li>
-              <a href="datavis.html">Data-Visualisations</a>
-            </li>
-            <li>
-              <a href="dataart.html">Data-Art</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
+    </footer>
   </body>
 </html>

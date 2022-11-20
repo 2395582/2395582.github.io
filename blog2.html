@@ -4,46 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Movies, Film, Highest Grossing">
-    <meta name="description" content="A critical reflection of my UI/UX">
-    <meta name="author" content="Muhammad Seedat">
+    <meta name="keywords" content="Movies, Film, Highest Grossing" />
+    <meta name="description" content="A critical reflection of my UI/UX" />
+    <meta name="author" content="Muhammad Seedat" />
     <title>Critical Reflection</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="actblogsstyle.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="main-menu" class="navigation">
         <label for="logo" class="logo">Movie Magic Over Time</label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-          </div>
-
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="design.html">Design</a></li>
-          <li>
-            <a href="datavis.html">Data-Visualisations</a>
-          </li>
-          <li><a href="dataart.html">Data-Art</a></li>
-        </ul>
       </nav>
+      <script>
+        const navigationData = [
+          { title: "Home", link: "../index.html" },
+          { title: "Blogs", link: "../blogs.html" },
+          { title: "Design", link: "../design.html" },
+          { title: "Data Visualizations", link: "../datavis.html" },
+          { title: "Data-Art", link: "../dataart.html" },
+          { title: "Exam Data-Art", link: "../examdataart.html" },
+        ];
+
+        const navigations = document.getElementsByClassName("navigation");
+
+        for (var i = 0; i < navigations.length; i++) {
+          let list = document.createElement("ul");
+
+          for (var j = 0; j < navigationData.length; j++) {
+            let listItemLink = document.createElement("a");
+            listItemLink.innerText = navigationData[j].title;
+            listItemLink.setAttribute("href", navigationData[j].link);
+            let listItem = document.createElement("li");
+            listItem.appendChild(listItemLink);
+            list.appendChild(listItem);
+          }
+
+          navigations[i].appendChild(list);
+        }
+      </script>
     </header>
     <main>
-    <h1>Critical Reflection</h1>
-    <p>
-        My website is made to be quite easily explored. Without the main content, the data visualizations, it is hard to judge, but I believe in terms of UI/UX there is a solid foundation.
-    </p>
-    <p>
-        Each page follows the same visual pattern to ensure stability across the website, but the content is distinctly different to ensure there is no confusion. I do believe more can be done on this front, to ensure that viewers know exactly what page they are on at all times.
-    </p>
-    <p>
-        The pages all come equipped with a navigation bar offering the links to the different pages on the site. This allows for easy access and navigation across the website. In future, I plan to implement a drop-down menu to offer traversal to each specific page within a page. For example, hovering over the ‘BLOGS’ link on the home page, will allow the viewer to peruse all blogs and choose which one they would like to read. 
-    </p>
+      <h1>Critical Reflection</h1>
       <p>
-        Aesthetically speaking, the website takes a minimalistic approach. There is sparse use of color and the only decoration comes in the form of a ‘film strip’. This I hoped would add to the visual appeal in keeping with the theme. The images are small enough so as not to be distracting, but also add bit of a break from the rest of the page.
+        My website is made to be quite easily explored. Without the main
+        content, the data visualizations, it is hard to judge, but I believe in
+        terms of UI/UX there is a solid foundation.
       </p>
       <p>
-        The individual blog pages are laid out very simply, with only the text on a white background. This is to ensure no distraction while reading the blogs.
+        Each page follows the same visual pattern to ensure stability across the
+        website, but the content is distinctly different to ensure there is no
+        confusion. I do believe more can be done on this front, to ensure that
+        viewers know exactly what page they are on at all times.
+      </p>
+      <p>
+        The pages all come equipped with a navigation bar offering the links to
+        the different pages on the site. This allows for easy access and
+        navigation across the website. In future, I plan to implement a
+        drop-down menu to offer traversal to each specific page within a page.
+        For example, hovering over the ‘BLOGS’ link on the home page, will allow
+        the viewer to peruse all blogs and choose which one they would like to
+        read.
+      </p>
+      <p>
+        Aesthetically speaking, the website takes a minimalistic approach. There
+        is sparse use of color and the only decoration comes in the form of a
+        ‘film strip’. This I hoped would add to the visual appeal in keeping
+        with the theme. The images are small enough so as not to be distracting,
+        but also add bit of a break from the rest of the page.
+      </p>
+      <p>
+        The individual blog pages are laid out very simply, with only the text
+        on a white background. This is to ensure no distraction while reading
+        the blogs.
       </p>
 
       <ul>
@@ -55,23 +88,23 @@
         </li>
       </ul>
     </main>
-    
+
     <a href="#" class="to-top">TOP</a>
-      <script src="button.js"></script>
-      <footer>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li>
-              <a href="datavis.html">Data-Visualisations</a>
-            </li>
-            <li>
-              <a href="dataart.html">Data-Art</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
+    <script src="button.js"></script>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li>
+            <a href="datavis.html">Data-Visualisations</a>
+          </li>
+          <li>
+            <a href="dataart.html">Data-Art</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

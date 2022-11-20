@@ -4,193 +4,221 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Movies, Film, Highest Grossing">
-    <meta name="description" content="A close reading of - An Overview of Data Visualization">
-    <meta name="author" content="Muhammad Seedat">
+    <meta name="keywords" content="Movies, Film, Highest Grossing" />
+    <meta
+      name="description"
+      content="A close reading of - An Overview of Data Visualization"
+    />
+    <meta name="author" content="Muhammad Seedat" />
     <title>Overview of Data Visualization – A Close Reading</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="actblogsstyle.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="main-menu" class="navigation">
         <label for="logo" class="logo">Movie Magic Over Time</label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-          </div>
+      </nav>
+      <script>
+        const navigationData = [
+          { title: "Home", link: "../index.html" },
+          { title: "Blogs", link: "../blogs.html" },
+          { title: "Design", link: "../design.html" },
+          { title: "Data Visualizations", link: "../datavis.html" },
+          { title: "Data-Art", link: "../dataart.html" },
+          { title: "Exam Data-Art", link: "../examdataart.html" },
+        ];
 
+        const navigations = document.getElementsByClassName("navigation");
+
+        for (var i = 0; i < navigations.length; i++) {
+          let list = document.createElement("ul");
+
+          for (var j = 0; j < navigationData.length; j++) {
+            let listItemLink = document.createElement("a");
+            listItemLink.innerText = navigationData[j].title;
+            listItemLink.setAttribute("href", navigationData[j].link);
+            let listItem = document.createElement("li");
+            listItem.appendChild(listItemLink);
+            list.appendChild(listItem);
+          }
+
+          navigations[i].appendChild(list);
+        }
+      </script>
+    </header>
+    <main>
+      <h1>Overview of Data Visualization – A Close Reading</h1>
+      <p>
+        The reading opens with a brief history of data visualization. Through
+        this it succeeds in informing the reader of the long-standing use of
+        data visualization, as well as the importance and continued relevance of
+        this ancient means of information representation. It also establishes
+        that in this chapter, and subsequent chapters throughout the book,
+        ‘traditional data visualization’ refers to data visualization that
+        focuses on “communication for understanding” (Li, 2020, p. 17).
+      </p>
+      <p>
+        Traditional data visualization, according to Li, has a number of
+        advantages. After going through the four advantages listed, a conclusion
+        can be drawn, that data visualization deals with the representation of
+        data in an attempt to identify trends. These trends subsequently allow
+        us to make informed hypothesis based on the patterns that emerged.
+      </p>
+      <p>
+        This alone, is ample proof of the usefulness of data visualization.
+        Informed guesses about the future, based on past events, seems like a
+        particularly smart way to move forward. This does not only highlight the
+        usefulness of data visualization, but also reminds us of the importance
+        of correct data visualization. The fact that in any given field, quite a
+        lot can be riding on the hypothesis made from the data, bolsters the
+        idea that data visualization and the principles which govern good data
+        visualization are of utmost importance. Informed guesses cannot be made
+        without information. Before delving into these principles, the reading
+        first establishes a sound definition of data visualization.
+      </p>
+      <p>
+        The definitions surrounding data visualization focus on the relationship
+        between data and computer technology, in order to transform data into a
+        visual form. The reading quotes Card, Mackinlay and Schneiderman (1999)
+        as defining data visualization as:
+      </p>
+      <p>
+        the use of computer-supported, interactive, visual representations of
+        data to amplify cognition.
+      </p>
+      <p>
+        Another definition quoted in the reading, by Kirk (2012), reads as
+        follows:
+      </p>
+      <p>
+        the representation and presentation of data that exploits our visual
+        perception abilities in order to amplify cognition
+      </p>
+      <p>
+        These and other definitions given in the reading are quite useful in
+        reaching an understanding of the topic, data visualization. The words
+        that ring particularly true are ‘exploit’ and ‘amplify’. Given the
+        understanding we’ve reached of the importance of data visualization, we
+        can see why these words of a rather extreme nature are used in its
+        definition. The data being portrayed is of such importance, that its
+        portrayal not only lends itself to our visual perceptions, but exploits
+        it, in an attempt to not only achieve cognition, but to amplify it. It
+        speaks of a higher understanding born of an exploitation of the visual
+        senses. An “information exchange that includes the messenger, the
+        receiver and the message” (Kirk, 2012), all which, are of utmost
+        importance.
+      </p>
+      <p>
+        After reaching the definition, the reading goes on to touch on software
+        and applications used in the modern-day portrayal of data visualization,
+        as well as the core tenets of said programs. It also brings about a
+        distinction between two sub-categories within data visualization,
+        information, and scientific visualization.
+      </p>
+      <p>
+        The reading then goes into another definition, rather two definitions of
+        ‘data’ and ‘information.’ Beginning with data, it defines data as “raw,
+        unprocessed information that is not recognised as having any meaning.”
+        (Li, 2020, p.20). Through the lending of other definitions, the reading
+        pushes the idea that data merely exists, in various states, and can be
+        usable or not, and is also something we take a rapid influx of on a
+        regular basis (depending on your internet speed, I guess) in our current
+        information society.
+      </p>
+      <p>
+        Data is also split into two sub-categories, namely primary and (no
+        prizes for guessing) secondary. If the data collected is directly for
+        the purpose of the perusal of its information, it is classified as
+        primary data (Agarwal, 2006). Data which is processed and analysed in a
+        statistical sense to extract information is defined as secondary data.
+        The sub-categories seem to exist based on the use of the data, not the
+        data itself.
+      </p>
+      <p>
+        Data in this reading, however, is defined as it is similarly defined in
+        computer and information sciences as ‘unprocessed information.’ It can
+        therefore be both primary and secondary data, and in keeping with the
+        aforementioned sciences can be manipulated in several ways, all in an
+        attempt to exploit and amplify (see definitions section).
+      </p>
+      <p>
+        Information on the other hand, is the all-purpose flour to the wheat of
+        data, that it, it is data after it has undergone some form of processing
+        in order to make it readable, understandable, and recognizable based on
+        relational connections.
+      </p>
+      <p>
+        The reading then goes on to list a number of traditional forms that data
+        visualization can take. The main take away from this section is the idea
+        that data visualization, as suggested by its name, depends heavily on
+        the way it is represented on a visual level. With the understanding
+        we’ve reached of the importance of data visualization, it comes as no
+        surprise that the way the data is represented is of equal importance to
+        the data itself. Out of these many forms, one should not pick any form
+        arbitrarily, but instead great care should be taken to present the data
+        in the best possible way in order to (say it with me now) exploit and
+        amplify.
+      </p>
+      <p>
+        In this section, the reading also defines the characteristics of
+        traditional data visualization, as; Readability, i.e., it is
+        intelligible and easily understood, Recognizability, a characteristic
+        which relies on relational connections and deductions made based on
+        previously absorbed information, and lastly Meaning, i.e., the
+        information that is portrayed should be understood and signify some
+        meaning to the viewer. In providing these characteristics, the reading
+        also provides a sort of checklist for would-be data visualizers, in
+        order to make sure that their data visualizations meet the necessarily
+        and understandably high standards for data visualization.
+      </p>
+      <p>
+        In this section, the reading also defines the characteristics of
+        traditional data visualization, as; Readability, i.e., it is
+        intelligible and easily understood, Recognizability, a characteristic
+        which relies on relational connections and deductions made based on
+        previously absorbed information, and lastly Meaning, i.e., the
+        information that is portrayed should be understood and signify some
+        meaning to the viewer. In providing these characteristics, the reading
+        also provides a sort of checklist for would-be data visualizers, in
+        order to make sure that their data visualizations meet the necessarily
+        and understandably high standards for data visualization.
+      </p>
+      <p>
+        In the conclusion, the reading drives home the fact that the
+        relationship between aesthetics and data visualization is a relationship
+        to be considered. The inclusion of aesthetic design principles in data
+        visualization is by no means an arbitrary one. Rather it is a decision
+        which further highlights the importance of data visualization and
+        bolsters the idea of just how much can depend on its existence and the
+        correct portrayal of its existence. It is not the addition of flowers in
+        the garden to appease the neighbours, but rather the inclusion of
+        aesthetics to enhance the ability of data visualization to (one last
+        time) exploit and amplify.
+      </p>
+      <ul>
+        <li>
+          <a href="blog2.html">NEXT</a>
+        </li>
+      </ul>
+    </main>
+    <a href="#" class="to-top">TOP</a>
+    <script src="button.js"></script>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="blogs.html">Blogs</a></li>
           <li><a href="design.html">Design</a></li>
           <li>
             <a href="datavis.html">Data-Visualisations</a>
           </li>
-          <li><a href="dataart.html">Data-Art</a></li>
+          <li>
+            <a href="dataart.html">Data-Art</a>
+          </li>
         </ul>
       </nav>
-    </header>
-    <main>
-    <h1>Overview of Data Visualization – A Close Reading</h1>
-    <p>
-      The reading opens with a brief history of data visualization. Through this it
-      succeeds in informing the reader of the long-standing use of data
-      visualization, as well as the importance and continued relevance of this
-      ancient means of information representation. It also establishes that in this
-      chapter, and subsequent chapters throughout the book, ‘traditional data
-      visualization’ refers to data visualization that focuses on “communication for
-      understanding” (Li, 2020, p. 17).
-    </p>
-    <p>
-      Traditional data visualization, according to Li, has a number of advantages.
-      After going through the four advantages listed, a conclusion can be drawn,
-      that data visualization deals with the representation of data in an attempt to
-      identify trends. These trends subsequently allow us to make informed
-      hypothesis based on the patterns that emerged.
-    </p>
-    <p>
-      This alone, is ample proof of the usefulness of data visualization. Informed
-      guesses about the future, based on past events, seems like a particularly
-      smart way to move forward. This does not only highlight the usefulness of data
-      visualization, but also reminds us of the importance of correct data
-      visualization. The fact that in any given field, quite a lot can be riding on
-      the hypothesis made from the data, bolsters the idea that data visualization
-      and the principles which govern good data visualization are of utmost
-      importance. Informed guesses cannot be made without information. Before
-      delving into these principles, the reading first establishes a sound
-      definition of data visualization.
-    </p>
-    <p>
-      The definitions surrounding data visualization focus on the relationship
-      between data and computer technology, in order to transform data into a visual
-      form. The reading quotes Card, Mackinlay and Schneiderman (1999) as defining
-      data visualization as:
-    </p>
-    <p>
-      the use of computer-supported, interactive, visual representations of data to
-      amplify cognition.
-    </p>
-    <p>
-      Another definition quoted in the reading, by Kirk (2012), reads as follows:
-    </p>
-    <p>
-      the representation and presentation of data that exploits our visual
-      perception abilities in order to amplify cognition
-    </p>
-    <p>
-      These and other definitions given in the reading are quite useful in reaching
-      an understanding of the topic, data visualization. The words that ring
-      particularly true are ‘exploit’ and ‘amplify’. Given the understanding we’ve
-      reached of the importance of data visualization, we can see why these words of
-      a rather extreme nature are used in its definition. The data being portrayed
-      is of such importance, that its portrayal not only lends itself to our visual
-      perceptions, but exploits it, in an attempt to not only achieve cognition, but
-      to amplify it. It speaks of a higher understanding born of an exploitation of
-      the visual senses. An “information exchange that includes the messenger, the
-      receiver and the message” (Kirk, 2012), all which, are of utmost importance.
-    </p>
-    <p>
-      After reaching the definition, the reading goes on to touch on software and
-      applications used in the modern-day portrayal of data visualization, as well
-      as the core tenets of said programs. It also brings about a distinction
-      between two sub-categories within data visualization, information, and
-      scientific visualization.
-    </p>
-    <p>
-      The reading then goes into another definition, rather two definitions of
-      ‘data’ and ‘information.’ Beginning with data, it defines data as “raw,
-      unprocessed information that is not recognised as having any meaning.” (Li,
-      2020, p.20). Through the lending of other definitions, the reading pushes the
-      idea that data merely exists, in various states, and can be usable or not, and
-      is also something we take a rapid influx of on a regular basis (depending on
-      your internet speed, I guess) in our current information society.
-    </p>
-    <p>
-      Data is also split into two sub-categories, namely primary and (no prizes for
-      guessing) secondary. If the data collected is directly for the purpose of the
-      perusal of its information, it is classified as primary data (Agarwal, 2006).
-      Data which is processed and analysed in a statistical sense to extract
-      information is defined as secondary data. The sub-categories seem to exist
-      based on the use of the data, not the data itself.
-    </p>
-    <p>
-      Data in this reading, however, is defined as it is similarly defined in
-      computer and information sciences as ‘unprocessed information.’ It can
-      therefore be both primary and secondary data, and in keeping with the
-      aforementioned sciences can be manipulated in several ways, all in an attempt
-      to exploit and amplify (see definitions section).
-    </p>
-    <p>
-      Information on the other hand, is the all-purpose flour to the wheat of data,
-      that it, it is data after it has undergone some form of processing in order to
-      make it readable, understandable, and recognizable based on relational
-      connections.
-    </p>
-    <p>
-      The reading then goes on to list a number of traditional forms that data
-      visualization can take. The main take away from this section is the idea that
-      data visualization, as suggested by its name, depends heavily on the way it is
-      represented on a visual level. With the understanding we’ve reached of the
-      importance of data visualization, it comes as no surprise that the way the
-      data is represented is of equal importance to the data itself. Out of these
-      many forms, one should not pick any form arbitrarily, but instead great care
-      should be taken to present the data in the best possible way in order to (say
-      it with me now) exploit and amplify.
-    </p>
-    <p>
-      In this section, the reading also defines the characteristics of traditional
-      data visualization, as; Readability, i.e., it is intelligible and easily
-      understood, Recognizability, a characteristic which relies on relational
-      connections and deductions made based on previously absorbed information, and
-      lastly Meaning, i.e., the information that is portrayed should be understood
-      and signify some meaning to the viewer. In providing these characteristics,
-      the reading also provides a sort of checklist for would-be data visualizers,
-      in order to make sure that their data visualizations meet the necessarily and
-      understandably high standards for data visualization.
-    </p>
-    <p>
-      In this section, the reading also defines the characteristics of traditional
-      data visualization, as; Readability, i.e., it is intelligible and easily
-      understood, Recognizability, a characteristic which relies on relational
-      connections and deductions made based on previously absorbed information, and
-      lastly Meaning, i.e., the information that is portrayed should be understood
-      and signify some meaning to the viewer. In providing these characteristics,
-      the reading also provides a sort of checklist for would-be data visualizers,
-      in order to make sure that their data visualizations meet the necessarily and
-      understandably high standards for data visualization.
-    </p>
-    <p>
-      In the conclusion, the reading drives home the fact that the relationship
-      between aesthetics and data visualization is a relationship to be considered.
-      The inclusion of aesthetic design principles in data visualization is by no
-      means an arbitrary one. Rather it is a decision which further highlights the
-      importance of data visualization and bolsters the idea of just how much can
-      depend on its existence and the correct portrayal of its existence. It is not
-      the addition of flowers in the garden to appease the neighbours, but rather
-      the inclusion of aesthetics to enhance the ability of data visualization to
-      (one last time) exploit and amplify.
-    </p>
-    <ul>
-      <li>
-        <a href="blog2.html">NEXT</a>
-      </li>
-    </ul>
-    </main>
-    <a href="#" class="to-top">TOP</a>
-      <script src="button.js"></script>
-      
-      <footer>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li>
-              <a href="datavis.html">Data-Visualisations</a>
-            </li>
-            <li>
-              <a href="dataart.html">Data-Art</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
+    </footer>
   </body>
 </html>
