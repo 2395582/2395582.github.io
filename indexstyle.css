@@ -1,0 +1,101 @@
+html, body 
+{
+    height: 100%;
+    margin: 0;
+}
+
+.page
+{
+    float: left; 
+    width:75%; 
+}
+
+.page  h1{
+    margin: 1%;
+}
+
+
+.page p{
+    margin: 1%;
+}
+
+.page ul
+{
+    list-style: none;
+}
+
+.control
+{   
+    width: 25%;
+    background-color:  rgb(158, 148, 148);
+    float: left;
+    height: 100%;
+}
+
+.control button
+{
+    margin: 6%;
+}
+
+.control h1
+{
+    margin: 6%;
+}
+
+.modern
+{  
+    background-color:   rgb(255, 204, 0);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.modern .name
+{
+  font-size: 90px;
+  padding-left: 35%;
+  font-weight: bolder;
+}
+
+.modern li
+{
+  text-align: center;
+  font-size: larger;
+}
+
+ :root {
+    --mainColor: #000000;
+  }
+
+.modern a {
+    background:
+       linear-gradient(
+         to bottom,
+         var(--mainColor) 0%,
+         var(--mainColor) 100%
+       );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-size .9s;
+  }
+  
+  .modern a:hover {
+    background-size: 4px 50px;
+
+  }
+
+.modern p
+{
+ margin-top: 7%;
+ text-align: center;
+ font-size: 19px;
+ 
+}
+
+.modern .control
+{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+}

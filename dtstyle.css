@@ -1,0 +1,68 @@
+body
+{
+    background-color:   rgb(255, 204, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: bolder;
+}
+
+nav 
+{
+    background-color: rgb(158, 148, 148);
+    height: 60px;
+    width: 100%;
+}
+
+nav ul li 
+{
+    display: inline-block;  
+   margin-right: 19.1%;
+}
+
+.name
+{
+  font-size: 90px;
+  padding-left: 40%;
+  font-weight: bolder;
+}
+
+p
+{
+ margin-top: 7%;
+ text-align: center;
+ font-size: 19px;
+}
+
+ul
+{
+  list-style: none;
+}
+
+li
+{
+  text-align: center;
+  font-size: larger;
+  margin-top: 20px;
+}
+
+:root {
+    --mainColor: #000000;
+  }
+
+ a {
+    background:
+       linear-gradient(
+         to bottom,
+         var(--mainColor) 0%,
+         var(--mainColor) 100%
+       );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-size 1s;
+  }
+  
+  a:hover {
+    background-size: 4px 50px;
+  }
