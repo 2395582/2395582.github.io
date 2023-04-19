@@ -63,7 +63,7 @@ html, body
 }
 
 .buttond
-{
+{ 
   background-color:  rgb(255, 204, 0);
   color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -173,14 +173,15 @@ html, body
 
 .colorone
 {  
-    background-color:  #d7eaf3;
+    background-color:  #77b5d9;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
 }
 
+
 .colorone nav 
 {
-    background-color: #77b5d9;
+    background-color:#d7eaf3 ;
     height: 60px;
     width: 100%;
 }
@@ -207,7 +208,7 @@ html, body
 }
 
  :root {
-    --mainColor: #14397d;
+    --mainColor: ;
   }
 
 .colorone a {
@@ -220,7 +221,7 @@ html, body
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 3px 3px;
-    color: #ffffff;
+    color: #14397d;
     text-decoration: none;
     transition: background-size .9s;
   }
@@ -282,7 +283,7 @@ html, body
 }
 
  :root {
-    --mainColor: #01c8ee;
+    --mainColor: black;
   }
 
 .colortwo a {
@@ -295,7 +296,7 @@ html, body
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 3px 3px;
-    color: #ffffff;
+    color: black;
     text-decoration: none;
     transition: background-size .9s;
   }
@@ -381,7 +382,7 @@ html, body
   }
   
   .colorthree a:hover {
-    background-size: 4px 50px;
+    background-size: 4px 50px; 
 
   }
 
