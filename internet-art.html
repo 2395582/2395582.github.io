@@ -34,7 +34,8 @@
       </header>
       <p>
         This is my artwork, customize as you see fit, using buttons, x different
-        combinations. See how far you can go
+        combinations. See how far you can go. be careful styling is hard. if you
+        get stuck just refresh the page.
       </p>
       <ul>
         <li>
@@ -66,7 +67,24 @@
 
     <div class="control">
       <h1>CONTROL</h1>
-      <button onclick="myFunction()">Progress</button>
+      <button
+        class="button buttond"
+        onclick="firstCase()"
+        onclick="buttonColor()"
+      >
+        Progress
+      </button>
+      <div>
+        <button class="button button1" onclick="colorOne()">Colour 1</button>
+        <button class="button button2" onclick="colorTwo()">Colour 2</button>
+        <button class="button button3" onclick="colorThree()">Colour 3</button>
+      </div>
+      <div>
+        <button class="button button4" onclick="fontOne()">Font 1</button>
+        <button class="button button5" onclick="fontTwo()">Font 2</button>
+        <button class="button button6" onclick="fontThree()">Font 3</button>
+      </div>
+
       <script src="script.js"></script>
     </div>
   </body>
